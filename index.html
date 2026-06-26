@@ -1,444 +1,713 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hazem mtira</title>
+    <meta
+      name="description"
+      content="Hazem Mtira — aspiring game developer building interactive experiences in Unity, C# and XR."
+    />
+    <title>Hazem Mtira — Aspiring Game Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
   </head>
   <body>
-    <nav id="desktop-nav">
-      <div class="logo">Hazem Mtira</div>
-      <div>
+    <!-- ============================================================
+     ICON SPRITE
+============================================================ -->
+    <svg style="display: none" aria-hidden="true">
+      <symbol id="i-github" viewBox="0 0 24 24">
+        <path
+          d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.79-.26.79-.58v-2.23c-3.34.73-4.03-1.42-4.03-1.42-.55-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.49 1 .11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.29-1.23 3.29-1.23.67 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.62-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.19.69.8.58A12 12 0 0 0 24 12c0-6.63-5.37-12-12-12Z"
+        />
+      </symbol>
+      <symbol id="i-linkedin" viewBox="0 0 24 24">
+        <path
+          d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.38V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"
+        />
+      </symbol>
+      <symbol id="i-dribbble" viewBox="0 0 24 24">
+        <path
+          d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24Zm7.94 5.52a10.2 10.2 0 0 1 2.2 6.1c-.3-.06-3.4-.69-6.5-.3-.07-.16-.13-.32-.21-.49a23 23 0 0 0-.66-1.44c3.44-1.4 5-3.4 5.17-3.87Zm-1.2-1.27c-.15.41-1.5 2.27-4.78 3.5a48 48 0 0 0-3.74-6.1A10.2 10.2 0 0 1 12 1.7a10.2 10.2 0 0 1 6.74 2.55ZM8.6 1.97a45 45 0 0 1 3.68 6.05C8.04 9.1 4.16 9.06 3.75 9.06A10.27 10.27 0 0 1 8.6 1.97ZM1.7 12.04v-.27c.4 0 4.9.07 9.04-1.24.25.49.49.98.7 1.48-.12.03-.24.07-.36.11-4.27 1.38-6.54 5.15-6.73 5.47A10.2 10.2 0 0 1 1.7 12.04Zm4.66 7.18c.15-.31 1.85-3.76 6.55-5.34l.18-.06c1.21 3.32 1.71 6.1 1.83 6.83a10.2 10.2 0 0 1-8.56-1.43Zm10.21.55c-.1-.65-.56-3.23-1.69-6.5 2.92-.46 5.47.3 5.79.4a10.25 10.25 0 0 1-4.1 6.1Z"
+        />
+      </symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24">
+        <path
+          d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm17.4 2.06-7.9 5.7a1 1 0 0 1-1.18 0l-7.9-5.7-.32.95L11.1 14a2 2 0 0 0 2.36 0l8-5.74-.32-.94Z"
+        />
+      </symbol>
+      <symbol id="i-download" viewBox="0 0 24 24">
+        <path
+          d="M11 3h2v10.17l3.59-3.58 1.41 1.41-6 6-6-6 1.41-1.41L11 13.17V3ZM5 19h14v2H5v-2Z"
+        />
+      </symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24">
+        <path
+          d="M5 12h12.17l-4.59-4.59L14 6l7 6-7 6-1.41-1.41L17.17 13H5v-1Z"
+        />
+      </symbol>
+    </svg>
+
+    <!-- ============================================================
+     NAV
+============================================================ -->
+    <nav class="nav" id="nav">
+      <div class="nav-inner">
+        <a href="#top" class="logo"><span class="mark">HM</span> HAZEM MTIRA</a>
         <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about" data-nav>About</a></li>
+          <li><a href="#experience" data-nav>Experience</a></li>
+          <li><a href="#skills" data-nav>Skills</a></li>
+          <li><a href="#projects" data-nav>Projects</a></li>
+          <li><a href="#contact" data-nav>Contact</a></li>
         </ul>
-      </div>
-    </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">Hazem Mtira</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </div>
-      </div>
-    </nav>
-    <section id="profile">
-      <div class="section__pic-container">
-        <img src="./assets/profile-pic.png" alt="John Doe profile picture" />
-      </div>
-      <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">Hazem Mtira</h1>
-        <p class="section__text__p2">Software Developer</p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/resume-example.pdf')"
+        <div class="nav-right">
+          <span class="pill"
+            ><span class="dot"></span>Looking for junior roles</span
           >
-            Download CV
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Contact Info
+          <button
+            class="hamburger"
+            id="hamburger"
+            aria-label="Toggle menu"
+            aria-expanded="false"
+          >
+            <span></span><span></span><span></span>
           </button>
         </div>
-        <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://www.linkedin.com/in/hazem-mtira-8347b0262/'"
-          />
-          <img
-            src="./assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/hazemMtira'"
-          />
-          <img
-            src="./assets/dribbble.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://dribbble.com/hazem4design'"
-          />
+      </div>
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <!-- ============================================================
+     HERO
+============================================================ -->
+    <section class="hero" id="top">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <div class="hero-text" data-reveal>
+          <p class="hero-eyebrow">
+            <span class="dot"></span>Looking for junior game dev roles
+          </p>
+          <h1 class="hero-title">
+            Building games<br /><span class="accent-line"
+              >that move people.</span
+            >
+          </h1>
+          <p class="hero-sub">
+            Final-year Software Engineering student and aspiring game developer.
+            Recently completed a Game Development internship at Inherited Games
+            Studio, co-building RehabX — a VR rehabilitation platform for Meta
+            Quest headsets.
+          </p>
+          <div class="hero-cta">
+            <a href="#experience" class="btn btn-primary"
+              >View My Work
+              <svg class="icon" style="width: 14px; height: 14px">
+                <use href="#i-arrow" /></svg
+            ></a>
+            <a href="resume.pdf" class="btn btn-outline" download
+              >Download CV
+              <svg class="icon" style="width: 14px; height: 14px">
+                <use href="#i-download" /></svg
+            ></a>
+          </div>
+          <div class="hero-social">
+            <a
+              href="https://github.com/hazemMtira"
+              target="_blank"
+              rel="noopener"
+              aria-label="GitHub"
+              ><svg class="icon"><use href="#i-github" /></svg
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/hazem-mtira-2075b73b2/"
+              target="_blank"
+              rel="noopener"
+              aria-label="LinkedIn"
+              ><svg class="icon"><use href="#i-linkedin" /></svg
+            ></a>
+            <a
+              href="https://dribbble.com/hazem4design"
+              target="_blank"
+              rel="noopener"
+              aria-label="Dribbble"
+              ><svg class="icon"><use href="#i-dribbble" /></svg
+            ></a>
+            <a href="mailto:hazemofficiel4@gmail.com" aria-label="Email"
+              ><svg class="icon"><use href="#i-mail" /></svg
+            ></a>
+          </div>
+        </div>
+
+        <div class="player-card" data-reveal id="playerCard">
+          <div class="card-bar">
+            <span></span><span></span><span></span>
+            <span class="card-bar-label">PLAYER_PROFILE.dat</span>
+          </div>
+          <div class="card-body">
+            <p class="card-name">HAZEM MTIRA</p>
+            <p class="card-role">Aspiring Game Developer</p>
+
+            <div class="meter">
+              <div class="meter-top"><span>Unity</span></div>
+              <div class="meter-track">
+                <div class="meter-fill" style="width: 78%"></div>
+              </div>
+            </div>
+            <div class="meter">
+              <div class="meter-top"><span>C#</span></div>
+              <div class="meter-track">
+                <div class="meter-fill" style="width: 78%"></div>
+              </div>
+            </div>
+            <div class="meter">
+              <div class="meter-top"><span>VR / Meta Quest</span></div>
+              <div class="meter-track">
+                <div class="meter-fill" style="width: 62%"></div>
+              </div>
+            </div>
+            <div class="meter">
+              <div class="meter-top"><span>Game Design</span></div>
+              <div class="meter-track">
+                <div class="meter-fill" style="width: 48%"></div>
+              </div>
+            </div>
+
+            <div class="card-status-group">
+              <div class="card-status">
+                <span class="dot accent"></span>Building personal projects
+              </div>
+            </div>
+            <div class="card-loc">
+              Sousse, Tunisia · Looking for opportunities
+            </div>
+          </div>
         </div>
       </div>
     </section>
+
+    <!-- ============================================================
+     ABOUT
+============================================================ -->
     <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img
-            src="./assets/about-pic.png"
-            alt="Profile picture"
-            class="about-pic"
-          />
+      <div class="container">
+        <div data-reveal>
+          <p class="eyebrow">About</p>
+          <h2 class="section-title">
+            From class projects to a studio internship.
+          </h2>
         </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./assets/education.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Education</h3>
-              <p>baccalaureate Degree In CS</p>
+        <div class="about-grid">
+          <p class="about-text" data-reveal>
+            I'm a final-year Software Engineering student in Tunisia with a
+            growing focus on game development. My academic path included a
+            full-stack team platform and a 3D Unity game built to close out a
+            course. My final-year thesis (PFE) started directly as a
+            <strong
+              >Game Development internship at Inherited Games Studio</strong
+            >, where I co-built RehabX, a VR rehabilitation platform for Meta
+            Quest — graded <strong>Mention Excellente</strong>. That internship
+            is now complete, and I'm currently looking for junior game
+            development opportunities while building personal projects on the
+            side.
+          </p>
+
+          <div class="timeline" data-reveal>
+            <div class="tl-item">
+              <span class="tl-index">01</span>
+              <h3>Endless Runner</h3>
+              <p class="tl-meta">End-of-Course Project — Unity, C#</p>
+              <p>
+                Built a Subway Surfers-inspired 3D endless runner to close out a
+                game development course — my first real gameplay-programming
+                project, covering movement, collisions, and a tight core loop.
+              </p>
             </div>
-          </div>
-          <div class="text-container">
-            <p>
-              As a student working on my bachelor’s degree, I’ve grown to love software development. Whether it’s mobile development, web development, or even game design, I enjoy the challenge of creating things that look good and are easy for people to use. I find it exciting to learn how people think and then design something that fits their needs. Every time I learn a new tool or skill, my interest grows even more. For me, it’s not just about making things look nice it’s about making them work well, and that’s what keeps me motivated every day.            
-            </p>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
-    </section>
-    <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Web Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>CSS</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>JavaScript</h3>
-                  <p>Beginner</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Bootstrap</h3>
-                  <p>Beginner</p>
-                </div>
-              </article>
-              
+            <div class="tl-item">
+              <span class="tl-index">02</span>
+              <h3>Awqat</h3>
+              <p class="tl-meta">Team Platform — PHP, Python, MySQL</p>
+              <p>
+                Joined a team to build a full-stack, AI-assisted event platform.
+                Contributed across the whole project — from concept to frontend
+                and backend — including the Python-based recommendation engine.
+              </p>
             </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Game Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Unity</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>C#</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Game Design Principles</h3>
-                  <p>Beginner</p>
-                </div>
-              </article>
-              
+            <div class="tl-item">
+              <span class="tl-index">03</span>
+              <h3>Joining Inherited Games Studio</h3>
+              <p class="tl-meta">Game Development Internship — Mar 2026</p>
+              <p>
+                Joined the studio as a game development intern, stepping into a
+                real production environment for the first time. My final-year
+                thesis (PFE) started directly here.
+              </p>
             </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Mobile Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Java</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Flutter</h3>
-                  <p>Beginner</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>React Native</h3>
-                  <p>Beginner</p>
-                </div>
-              </article>
-              
-            </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Programming Languages</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Python</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>C</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>java</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>dart</h3>
-                  <p>Beginner</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>C++</h3>
-                  <p>Beginner</p>
-                </div>
-              </article>
-              
-            </div>
-          </div>
-          
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
-    </section>
-    <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-1.jpg"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">My Portfolio</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/hazemMtira/my-portfolio.git'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://hazemmtira.netlify.app/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/logo.PNG"
-                alt="Project 2"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">ouqat</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/mrsnifo/awqat-event-management-fyp-2025'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://www.linkedin.com/posts/hazem-mtira-8347b0262_web-webdev-dev-activity-7325605051849191425-vocK?utm_source=share&utm_medium=member_desktop&rcm=ACoAAECLs6gBMS0Y5TlIxQKgEestXD76zoZSVto'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container" style="display: none;">
-            <div class="article-container">
-              <img
-                src="./assets/project-3.png"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Project Three</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
+            <div class="tl-item">
+              <span class="tl-index">04</span>
+              <h3>RehabX</h3>
+              <p class="tl-meta">PFE + Internship — Unity, C#, Meta Quest</p>
+              <p>
+                Co-built a modular VR rehabilitation platform with one teammate
+                — hand-tracking gameplay, a Supabase backend, and a therapist
+                dashboard, tested with real patients. Graded Mention Excellente.
+              </p>
             </div>
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
     </section>
-    <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p><a href="hazemofficiel4@gmail.com">hazemofficiel4@gmail.com</a></p>
+
+    <!-- ============================================================
+     EXPERIENCE
+============================================================ -->
+    <section id="experience" class="section-alt">
+      <div class="container">
+        <div data-reveal>
+          <p class="eyebrow">Experience</p>
+          <h2 class="section-title">Shipped in a real studio.</h2>
         </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-          <p><a href="https://www.linkedin.com/in/hazem-mtira-8347b0262/">LinkedIn</a></p>
-        </div>
-      </div>
-    </section>
-    <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+
+        <div class="exp-card" data-reveal>
+          <div class="exp-head">
+            <div class="exp-head-left">
+              <div class="exp-logo">IGS</div>
+              <div>
+                <p class="exp-role">Game Development Intern</p>
+                <p class="exp-company">Inherited Games Studio</p>
+              </div>
+            </div>
+            <p class="exp-period">Mar 2026 — May 2026</p>
+          </div>
+
+          <div class="project-tags">
+            <span class="tag">Unity</span><span class="tag">C#</span
+            ><span class="tag">Meta Quest</span
+            ><span class="tag">Hand Tracking</span
+            ><span class="tag">Supabase</span>
+          </div>
+
+          <ul class="exp-list">
+            <li>
+              Completed a Game Development internship at Inherited Games Studio,
+              co-building <strong>RehabX</strong>, a modular VR rehabilitation
+              platform for Meta Quest headsets, alongside one teammate —
+              submitted as my final-year thesis and graded
+              <em>Mention Excellente</em> (highest distinction).
+            </li>
+            <li>
+              Built two VR serious games: <strong>Critter Pop VR</strong>, an
+              upper-limb rehabilitation game using controller-free hand
+              tracking, and <strong>Step Stones VR</strong>, a physics-based
+              lower-body balance and coordination game.
+            </li>
+            <li>
+              Designed a custom gesture-detection system for Critter Pop VR from
+              scratch, using anthropometric body-proportion estimation to derive
+              elbow-angle data the Meta XR SDK doesn't expose.
+            </li>
+            <li>
+              Integrated both games with a Supabase backend and a
+              therapist-facing dashboard for remote session configuration, live
+              monitoring, and automatic KPI collection.
+            </li>
+            <li>
+              Tested the system with real patients — validating it as a
+              functional rehabilitation tool, not just a prototype.
+            </li>
           </ul>
+
+          <div class="project-links">
+            <a
+              href="https://github.com/hazemMtira/RehabX"
+              target="_blank"
+              rel="noopener"
+              class="btn btn-outline btn-small"
+              ><svg class="icon" style="width: 14px; height: 14px">
+                <use href="#i-github" />
+              </svg>
+              RehabX on GitHub</a
+            >
+          </div>
         </div>
-      </nav>
-      <p>Copyright &#169; 2024 Hazem Mtira. All Rights Reserved.</p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+     SKILLS
+============================================================ -->
+    <section id="skills">
+      <div class="container">
+        <div data-reveal>
+          <p class="eyebrow">Skills</p>
+          <h2 class="section-title">What I build with.</h2>
+        </div>
+
+        <div data-reveal>
+          <div class="skill-group">
+            <p class="skill-label">Game Development</p>
+            <div class="chips">
+              <span class="chip chip-core">Unity Engine</span>
+              <span class="chip chip-core">C#</span>
+              <span class="chip chip-core">Game Design Principles</span>
+              <span class="chip chip-core">Gameplay &amp; Level Mechanics</span>
+              <span class="chip chip-core">Player Experience Design</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <p class="skill-label">Game Technology</p>
+            <div class="chips">
+              <span class="chip chip-core">Meta Quest Development</span>
+              <span class="chip chip-core"
+                >Hand Tracking / Gesture Detection</span
+              >
+              <span class="chip chip-core">ShaderLab (Custom Shaders)</span>
+              <span class="chip chip-core">VR/XR Interaction</span>
+              <span class="chip chip-core">Physics-Based Interaction</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <p class="skill-label">Programming Languages</p>
+            <div class="chips">
+              <span class="chip chip-outline">C#</span>
+              <span class="chip chip-outline">Python</span>
+              <span class="chip chip-outline">JavaScript</span>
+              <span class="chip chip-outline">Java</span>
+              <span class="chip chip-outline">C</span>
+              <span class="chip chip-outline">C++</span>
+              <span class="chip chip-outline">PHP</span>
+              <span class="chip chip-outline">TypeScript</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <p class="skill-label">Tools &amp; Workflow</p>
+            <div class="chips">
+              <span class="chip chip-outline">Git</span>
+              <span class="chip chip-outline">GitHub</span>
+              <span class="chip chip-outline">VS Code</span>
+              <span class="chip chip-outline">Supabase</span>
+              <span class="chip chip-outline">Figma (UI/UX)</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <p class="skill-label">Supporting — Web &amp; Embedded</p>
+            <div class="chips">
+              <span class="chip chip-outline">HTML / CSS</span>
+              <span class="chip chip-outline">Bootstrap</span>
+              <span class="chip chip-outline">PHP / MySQL</span>
+              <span class="chip chip-outline">Microsoft MakeCode</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <p class="skill-label">Soft Skills</p>
+            <div class="chips">
+              <span class="chip chip-outline">Team Collaboration</span>
+              <span class="chip chip-outline">Communication</span>
+              <span class="chip chip-outline"
+                >Adaptability &amp; Fast Learning</span
+              >
+              <span class="chip chip-outline">Problem-Solving</span>
+              <span class="chip chip-outline">Time Management</span>
+              <span class="chip chip-outline">Remote Collaboration</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+     PROJECTS
+============================================================ -->
+    <section id="projects" class="section-alt">
+      <div class="container">
+        <div data-reveal>
+          <p class="eyebrow">Projects</p>
+          <h2 class="section-title">Academic &amp; side projects.</h2>
+        </div>
+
+        <div class="project-grid" data-reveal>
+          <!-- Awqat -->
+          <article class="project-card">
+            <div class="art-wrap">
+              <div class="art-chrome">
+                <span></span><span></span><span></span>Awqat
+              </div>
+              <svg viewBox="0 0 600 400" preserveAspectRatio="xMidYMid slice">
+                <defs>
+                  <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#15201d" />
+                    <stop offset="1" stop-color="#17151a" />
+                  </linearGradient>
+                </defs>
+                <rect width="600" height="400" fill="url(#g2)" />
+                <g stroke="#4fa68c" stroke-width="1.6" opacity="0.8">
+                  <line x1="120" y1="120" x2="280" y2="90" />
+                  <line x1="280" y1="90" x2="430" y2="160" />
+                  <line x1="120" y1="120" x2="200" y2="260" />
+                  <line x1="200" y1="260" x2="380" y2="300" />
+                  <line x1="430" y1="160" x2="380" y2="300" />
+                  <line x1="280" y1="90" x2="200" y2="260" />
+                </g>
+                <g fill="#4fa68c">
+                  <circle cx="120" cy="120" r="7" />
+                  <circle cx="280" cy="90" r="9" />
+                  <circle cx="430" cy="160" r="7" />
+                  <circle cx="200" cy="260" r="10" />
+                  <circle cx="380" cy="300" r="7" />
+                </g>
+              </svg>
+            </div>
+            <div class="project-body">
+              <p class="project-meta">Team Final-Year Platform</p>
+              <h3 class="project-title">Awqat — AI-Powered Event Platform</h3>
+              <div class="project-tags">
+                <span class="tag">PHP</span><span class="tag">MySQL</span
+                ><span class="tag">Bootstrap</span
+                ><span class="tag">Python</span><span class="tag">YOLO</span>
+              </div>
+              <p class="project-desc">
+                A full-stack platform for discovering, creating, and managing
+                events, built with a project team. Contributed across the whole
+                project — from the original concept through frontend and backend
+                implementation — including the Python-based AI recommendation
+                engine, with YOLO-based computer vision explored as an
+                experimental feature.
+              </p>
+              <div class="project-links">
+                <a
+                  href="https://github.com/mrsnifo/awqat-event-management-fyp-2025"
+                  target="_blank"
+                  rel="noopener"
+                  class="btn btn-outline btn-small"
+                  ><svg class="icon" style="width: 14px; height: 14px">
+                    <use href="#i-github" />
+                  </svg>
+                  Team Repo</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <!-- Endless Runner -->
+          <article class="project-card">
+            <div class="art-wrap">
+              <div class="art-chrome">
+                <span></span><span></span><span></span>Runner.unity
+              </div>
+              <svg viewBox="0 0 600 400" preserveAspectRatio="xMidYMid slice">
+                <defs>
+                  <linearGradient id="g3" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#1a1a22" />
+                    <stop offset="1" stop-color="#17151a" />
+                  </linearGradient>
+                </defs>
+                <rect width="600" height="400" fill="url(#g3)" />
+                <g stroke="#ffb088" stroke-width="2" opacity="0.55">
+                  <line x1="0" y1="380" x2="220" y2="40" />
+                  <line x1="120" y1="400" x2="320" y2="40" />
+                  <line x1="280" y1="400" x2="420" y2="40" />
+                  <line x1="460" y1="400" x2="500" y2="40" />
+                </g>
+                <rect
+                  x="270"
+                  y="250"
+                  width="26"
+                  height="40"
+                  rx="4"
+                  fill="#ff8a52"
+                />
+                <rect
+                  x="200"
+                  y="300"
+                  width="20"
+                  height="20"
+                  rx="3"
+                  fill="#ffffff"
+                  opacity="0.25"
+                />
+                <rect
+                  x="360"
+                  y="190"
+                  width="20"
+                  height="20"
+                  rx="3"
+                  fill="#ffffff"
+                  opacity="0.25"
+                />
+              </svg>
+            </div>
+            <div class="project-body">
+              <p class="project-meta">End-of-Course Project</p>
+              <h3 class="project-title">
+                Endless Runner (Subway Surfers-Inspired)
+              </h3>
+              <div class="project-tags">
+                <span class="tag">Unity</span><span class="tag">C#</span>
+              </div>
+              <p class="project-desc">
+                A 3D endless-runner built in Unity to close out a game
+                development course — my first real gameplay-programming project.
+                Player movement, obstacle and collision mechanics, and tuning a
+                responsive core loop.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+     CONTACT
+============================================================ -->
+    <section id="contact" class="contact">
+      <div class="container" data-reveal>
+        <p class="eyebrow">Contact</p>
+        <h2 class="section-title">Let's build something.</h2>
+        <p class="contact-sub">
+          Currently looking for junior game development opportunities, while
+          building personal projects on the side. Based in Tunisia, happy to
+          work remotely.
+        </p>
+        <div class="contact-actions">
+          <a href="mailto:hazemofficiel4@gmail.com" class="btn btn-primary"
+            ><svg class="icon" style="width: 14px; height: 14px">
+              <use href="#i-mail" />
+            </svg>
+            Email Me</a
+          >
+          <a href="resume.pdf" class="btn btn-outline" download
+            ><svg class="icon" style="width: 14px; height: 14px">
+              <use href="#i-download" />
+            </svg>
+            Download CV</a
+          >
+        </div>
+        <div class="hero-social">
+          <a
+            href="https://github.com/hazemMtira"
+            target="_blank"
+            rel="noopener"
+            aria-label="GitHub"
+            ><svg class="icon"><use href="#i-github" /></svg
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/hazem-mtira-2075b73b2/"
+            target="_blank"
+            rel="noopener"
+            aria-label="LinkedIn"
+            ><svg class="icon"><use href="#i-linkedin" /></svg
+          ></a>
+          <a
+            href="https://dribbble.com/hazem4design"
+            target="_blank"
+            rel="noopener"
+            aria-label="Dribbble"
+            ><svg class="icon"><use href="#i-dribbble" /></svg
+          ></a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="container">
+      <p>
+        © 2026 Hazem Mtira — built with HTML, CSS, and a bit of Unity-brain.
+      </p>
+      <span class="ver">v2.0</span>
     </footer>
-    <script src="script.js"></script>
+
+    <script>
+      // Mobile menu
+      const hamburger = document.getElementById("hamburger");
+      const mobileMenu = document.getElementById("mobileMenu");
+      hamburger.addEventListener("click", () => {
+        const isOpen = mobileMenu.classList.toggle("open");
+        hamburger.setAttribute("aria-expanded", isOpen);
+      });
+      mobileMenu.querySelectorAll("a").forEach((a) =>
+        a.addEventListener("click", () => {
+          mobileMenu.classList.remove("open");
+          hamburger.setAttribute("aria-expanded", false);
+        }),
+      );
+
+      // Nav background on scroll
+      const nav = document.getElementById("nav");
+      window.addEventListener("scroll", () => {
+        nav.classList.toggle("scrolled", window.scrollY > 10);
+      });
+
+      const reduceMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)",
+      ).matches;
+
+      // Reveal on scroll
+      if (!reduceMotion && "IntersectionObserver" in window) {
+        const revealObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("in-view");
+                revealObserver.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.15 },
+        );
+        document
+          .querySelectorAll("[data-reveal]")
+          .forEach((el) => revealObserver.observe(el));
+
+        const cardObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("in-view");
+                cardObserver.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.3 },
+        );
+        const playerCard = document.getElementById("playerCard");
+        if (playerCard) cardObserver.observe(playerCard);
+      } else {
+        document
+          .querySelectorAll("[data-reveal]")
+          .forEach((el) => el.classList.add("in-view"));
+        const playerCard = document.getElementById("playerCard");
+        if (playerCard) playerCard.classList.add("in-view");
+      }
+
+      // Active nav link on scroll
+      const sections = document.querySelectorAll("section[id]");
+      const navLinks = document.querySelectorAll(".nav-links a[data-nav]");
+      const navObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              navLinks.forEach((l) => l.classList.remove("active"));
+              const match = document.querySelector(
+                `.nav-links a[href="#${entry.target.id}"]`,
+              );
+              if (match) match.classList.add("active");
+            }
+          });
+        },
+        { rootMargin: "-40% 0px -50% 0px" },
+      );
+      sections.forEach((s) => navObserver.observe(s));
+    </script>
   </body>
 </html>
