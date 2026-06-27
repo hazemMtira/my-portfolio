@@ -14,15 +14,15 @@
     --accent: #ff6a2b;
     --accent-2: #4fa68c;
     --accent-rgb: 255,106,43;
-
+ 
     --font-display: 'Big Shoulders', sans-serif;
     --font-body: 'IBM Plex Sans', sans-serif;
     --font-mono: 'IBM Plex Mono', monospace;
-
+ 
     --container: 1180px;
     --radius: 5px;
   }
-
+ 
   *,*::before,*::after{ box-sizing: border-box; }
   html{ scroll-behavior: smooth; }
   body{
@@ -37,7 +37,7 @@
   img{ max-width:100%; display:block; }
   a{ color: inherit; text-decoration:none; }
   ::selection{ background: var(--accent); color: #1a1208; }
-
+ 
   a:focus-visible,
   button:focus-visible,
   .chip:focus-visible{
@@ -45,13 +45,13 @@
     outline-offset: 3px;
     border-radius: 2px;
   }
-
+ 
   .container{
     max-width: var(--container);
     margin: 0 auto;
     padding: 0 28px;
   }
-
+ 
   .eyebrow{
     font-family: var(--font-mono);
     font-size: 0.78rem;
@@ -63,7 +63,7 @@
     align-items:center;
     gap:8px;
   }
-
+ 
   .section-title{
     font-family: var(--font-display);
     font-weight: 700;
@@ -72,10 +72,10 @@
     margin: 0 0 22px;
     letter-spacing: -0.01em;
   }
-
+ 
   section{ padding: 96px 0; position: relative; }
   .section-alt{ background: var(--bg-soft); }
-
+ 
   /* reveal-on-scroll */
   [data-reveal]{
     opacity: 0;
@@ -83,12 +83,12 @@
     transition: opacity .6s ease, transform .6s ease;
   }
   [data-reveal].in-view{ opacity: 1; transform: translateY(0); }
-
+ 
   @media (prefers-reduced-motion: reduce){
     [data-reveal]{ opacity:1; transform:none; transition:none; }
     html{ scroll-behavior:auto; }
   }
-
+ 
   /* ============================================================
      BUTTONS
   ============================================================ */
@@ -112,12 +112,12 @@
   .btn-outline{ background: transparent; color: var(--text); border-color: var(--line-strong); }
   .btn-outline:hover{ border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
   .btn-small{ padding: 0.55em 1.05em; font-size: 0.82rem; }
-
+ 
   /* ============================================================
      ICONS (sprite, referenced via <use>)
   ============================================================ */
   .icon{ width:20px; height:20px; fill:currentColor; }
-
+ 
   /* ============================================================
      NAV
   ============================================================ */
@@ -159,7 +159,7 @@
   }
   .pill .dot{ width:6px; height:6px; border-radius:50%; background: var(--accent-2); animation: pulse 2s infinite; }
   @keyframes pulse{ 0%,100%{ opacity:1; } 50%{ opacity:.35; } }
-
+ 
   .hamburger{ display:none; flex-direction:column; gap:5px; background:none; border:none; padding:6px; cursor:pointer; }
   .hamburger span{ width:22px; height:2px; background: var(--text); display:block; }
   .mobile-menu{
@@ -175,7 +175,7 @@
     font-family: var(--font-mono); text-transform:uppercase; letter-spacing:0.06em; font-size:0.95rem;
     color: var(--text-muted);
   }
-
+ 
   /* ============================================================
      HERO
   ============================================================ */
@@ -221,7 +221,7 @@
   }
   .hero-social a:hover{ border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
   .hero-social .icon{ width:17px; height:17px; }
-
+ 
   /* Player card */
   .player-card{
     background: var(--panel);
@@ -265,14 +265,14 @@
   .card-status .dot{ width:7px; height:7px; border-radius:50%; background: var(--accent-2); flex-shrink:0; animation: pulse 2s infinite; }
   .card-status .dot.accent{ background: var(--accent); }
   .card-loc{ font-size:0.8rem; color: var(--text-dim); margin-top:10px; font-family: var(--font-mono); }
-
+ 
   /* ============================================================
      ABOUT
   ============================================================ */
   .about-grid{ display:grid; grid-template-columns: 0.95fr 1.05fr; gap:64px; align-items:start; }
   .about-text{ color: var(--text-muted); font-size:1.04rem; max-width: 480px; }
   .about-text strong{ color: var(--text); font-weight:600; }
-
+ 
   .timeline{ position:relative; padding-left: 8px; }
   .tl-item{ position:relative; padding: 0 0 34px 46px; }
   .tl-item:last-child{ padding-bottom:0; }
@@ -289,7 +289,8 @@
   .tl-item h3{ margin:0 0 4px; font-family: var(--font-display); font-weight:700; font-size:1.2rem; }
   .tl-meta{ font-family: var(--font-mono); font-size:0.78rem; color: var(--accent-2); margin: 0 0 8px; letter-spacing:0.02em; }
   .tl-item p:not(.tl-meta){ color: var(--text-muted); margin:0; font-size:0.96rem; }
-
+  .tl-item p:not(.tl-meta) strong{ color: var(--text); font-weight:600; }
+ 
   /* ============================================================
      EXPERIENCE
   ============================================================ */
@@ -320,7 +321,7 @@
   }
   .exp-list strong{ color: var(--text); font-weight:600; }
   .exp-list em{ color: var(--accent-2); font-style:normal; }
-
+ 
   /* ============================================================
      SKILLS
   ============================================================ */
@@ -336,7 +337,7 @@
   }
   .chip-core{ background: rgba(var(--accent-rgb),0.14); color: #ffb088; border:1px solid rgba(var(--accent-rgb),0.35); }
   .chip-outline{ background: transparent; color: var(--text-muted); border:1px solid var(--line-strong); }
-
+ 
   /* ============================================================
      PROJECTS
   ============================================================ */
@@ -365,9 +366,10 @@
   .project-tags{ display:flex; flex-wrap:wrap; gap:7px; margin-bottom:14px; }
   .tag{ font-family: var(--font-mono); font-size:0.72rem; color: var(--text-muted); border:1px solid var(--line-strong); border-radius:4px; padding:3px 8px; }
   .project-desc{ color: var(--text-muted); font-size:0.94rem; margin:0 0 16px; flex:1; }
+  .project-desc strong{ color: var(--text); font-weight:600; }
   .project-note{ font-family: var(--font-mono); font-size:0.76rem; color: var(--text-dim); margin: 0 0 14px; }
   .project-links{ display:flex; gap:10px; flex-wrap:wrap; margin-top:auto; }
-
+ 
   /* ============================================================
      CONTACT
   ============================================================ */
@@ -377,7 +379,7 @@
   .contact-actions{ display:flex; gap:14px; justify-content:center; flex-wrap:wrap; margin-bottom:38px; }
   .contact .hero-social{ justify-content:center; }
   .contact .eyebrow{ justify-content:center; }
-
+ 
   /* ============================================================
      FOOTER
   ============================================================ */
@@ -387,7 +389,7 @@
   }
   footer p{ margin:0; color: var(--text-dim); font-size:0.84rem; }
   .ver{ font-family: var(--font-mono); color: var(--text-dim); border:1px solid var(--line); border-radius:4px; padding:3px 8px; font-size:0.74rem; }
-
+ 
   /* ============================================================
      RESPONSIVE
   ============================================================ */

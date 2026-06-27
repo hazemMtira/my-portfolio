@@ -187,8 +187,10 @@
 
             <div class="card-status-group">
               <div class="card-status">
-                <span class="dot accent"></span>Currently Building personal
-                projects and improving my skills
+                <span class="dot"></span>PFE + Internship: completed
+              </div>
+              <div class="card-status">
+                <span class="dot accent"></span>Building personal projects
               </div>
             </div>
             <div class="card-loc">
@@ -326,7 +328,17 @@
             </li>
           </ul>
 
-          
+          <div class="project-links">
+            <a
+              href="https://github.com/hazemMtira/RehabX"
+              target="_blank"
+              rel="noopener"
+              class="btn btn-outline btn-small"
+              ><svg class="icon" style="width: 14px; height: 14px">
+                <use href="#i-github" />
+              </svg>
+              RehabX on GitHub</a
+            >
           </div>
         </div>
       </div>
@@ -394,6 +406,7 @@
               <span class="chip chip-outline">HTML / CSS</span>
               <span class="chip chip-outline">Bootstrap</span>
               <span class="chip chip-outline">PHP / MySQL</span>
+              <span class="chip chip-outline">Microsoft MakeCode</span>
             </div>
           </div>
           <div class="skill-group">
@@ -420,10 +433,99 @@
       <div class="container">
         <div data-reveal>
           <p class="eyebrow">Projects</p>
-          <h2 class="section-title">Academic &amp; side projects.</h2>
+          <h2 class="section-title">What I've built.</h2>
         </div>
 
         <div class="project-grid" data-reveal>
+          <!-- RehabX -->
+          <article class="project-card">
+            <div class="art-wrap">
+              <div class="art-chrome">
+                <span></span><span></span><span></span>RehabX
+              </div>
+              <svg viewBox="0 0 600 400" preserveAspectRatio="xMidYMid slice">
+                <defs>
+                  <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#241a16" />
+                    <stop offset="1" stop-color="#17151a" />
+                  </linearGradient>
+                  <radialGradient id="g1b" cx="0.7" cy="0.3" r="0.6">
+                    <stop offset="0" stop-color="#ff6a2b" stop-opacity="0.35" />
+                    <stop offset="1" stop-color="#ff6a2b" stop-opacity="0" />
+                  </radialGradient>
+                </defs>
+                <rect width="600" height="400" fill="url(#g1)" />
+                <rect width="600" height="400" fill="url(#g1b)" />
+                <g opacity="0.5" stroke="#ffffff" stroke-width="0.5">
+                  <line x1="0" y1="100" x2="600" y2="100" />
+                  <line x1="0" y1="200" x2="600" y2="200" />
+                  <line x1="0" y1="300" x2="600" y2="300" />
+                  <line x1="150" y1="0" x2="150" y2="400" />
+                  <line x1="300" y1="0" x2="300" y2="400" />
+                  <line x1="450" y1="0" x2="450" y2="400" />
+                </g>
+                <g transform="translate(300,200)">
+                  <rect
+                    x="-70"
+                    y="-34"
+                    width="140"
+                    height="68"
+                    rx="20"
+                    fill="none"
+                    stroke="#ff8a52"
+                    stroke-width="3"
+                  />
+                  <circle
+                    cx="-28"
+                    cy="0"
+                    r="16"
+                    fill="none"
+                    stroke="#ff8a52"
+                    stroke-width="3"
+                  />
+                  <circle
+                    cx="28"
+                    cy="0"
+                    r="16"
+                    fill="none"
+                    stroke="#ff8a52"
+                    stroke-width="3"
+                  />
+                  <path
+                    d="M-160 0 L-90 0 L-70 -40 L-50 30 L-25 -10 L25 -10 L40 0 L160 0"
+                    fill="none"
+                    stroke="#ffb088"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </g>
+              </svg>
+            </div>
+            <div class="project-body">
+              <p class="project-meta">
+                Studio Internship + Final-Year Thesis (PFE)
+              </p>
+              <h3 class="project-title">RehabX — VR Rehabilitation Platform</h3>
+              <div class="project-tags">
+                <span class="tag">Unity</span><span class="tag">C#</span
+                ><span class="tag">Meta Quest</span
+                ><span class="tag">Hand Tracking</span
+                ><span class="tag">Supabase</span>
+              </div>
+              <p class="project-desc">
+                A modular VR rehabilitation platform built during a Game
+                Development internship at Inherited Games Studio, with one
+                teammate. Includes two VR serious games —
+                <strong>Critter Pop VR</strong> (hand-tracking upper-limb rehab)
+                and <strong>Step Stones VR</strong> (physics-based balance
+                training) — plus a Supabase backend and therapist dashboard.
+                Tested with real patients and graded Mention Excellente.
+              </p>
+              <p class="project-note">Studio project — code kept private</p>
+            </div>
+          </article>
+
           <!-- Awqat -->
           <article class="project-card">
             <div class="art-wrap">
@@ -613,87 +715,6 @@
       <span class="ver">v2.0</span>
     </footer>
 
-    <script>
-      // Mobile menu
-      const hamburger = document.getElementById("hamburger");
-      const mobileMenu = document.getElementById("mobileMenu");
-      hamburger.addEventListener("click", () => {
-        const isOpen = mobileMenu.classList.toggle("open");
-        hamburger.setAttribute("aria-expanded", isOpen);
-      });
-      mobileMenu.querySelectorAll("a").forEach((a) =>
-        a.addEventListener("click", () => {
-          mobileMenu.classList.remove("open");
-          hamburger.setAttribute("aria-expanded", false);
-        }),
-      );
-
-      // Nav background on scroll
-      const nav = document.getElementById("nav");
-      window.addEventListener("scroll", () => {
-        nav.classList.toggle("scrolled", window.scrollY > 10);
-      });
-
-      const reduceMotion = window.matchMedia(
-        "(prefers-reduced-motion: reduce)",
-      ).matches;
-
-      // Reveal on scroll
-      if (!reduceMotion && "IntersectionObserver" in window) {
-        const revealObserver = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                entry.target.classList.add("in-view");
-                revealObserver.unobserve(entry.target);
-              }
-            });
-          },
-          { threshold: 0.15 },
-        );
-        document
-          .querySelectorAll("[data-reveal]")
-          .forEach((el) => revealObserver.observe(el));
-
-        const cardObserver = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                entry.target.classList.add("in-view");
-                cardObserver.unobserve(entry.target);
-              }
-            });
-          },
-          { threshold: 0.3 },
-        );
-        const playerCard = document.getElementById("playerCard");
-        if (playerCard) cardObserver.observe(playerCard);
-      } else {
-        document
-          .querySelectorAll("[data-reveal]")
-          .forEach((el) => el.classList.add("in-view"));
-        const playerCard = document.getElementById("playerCard");
-        if (playerCard) playerCard.classList.add("in-view");
-      }
-
-      // Active nav link on scroll
-      const sections = document.querySelectorAll("section[id]");
-      const navLinks = document.querySelectorAll(".nav-links a[data-nav]");
-      const navObserver = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              navLinks.forEach((l) => l.classList.remove("active"));
-              const match = document.querySelector(
-                `.nav-links a[href="#${entry.target.id}"]`,
-              );
-              if (match) match.classList.add("active");
-            }
-          });
-        },
-        { rootMargin: "-40% 0px -50% 0px" },
-      );
-      sections.forEach((s) => navObserver.observe(s));
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
