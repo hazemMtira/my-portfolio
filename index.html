@@ -1,184 +1,446 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Hazem Mtira | Junior Game Developer</title>
-<meta name="description" content="Hazem Mtira, Software Engineering graduate and aspiring game developer in Sousse, Tunisia. Co-developer of RehabX, a platform of two therapeutic VR games.">
-<meta name="theme-color" content="#121214">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hazem Mtira | Junior Game Developer">
-<meta property="og:description" content="Software Engineering graduate and aspiring game developer. Co-developer of RehabX, two therapeutic VR games.">
-<meta property="og:url" content="https://hazemmtira.netlify.app/">
-<link rel="icon" href="Assets/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap">
-<link rel="stylesheet" href="css/style.css">
-<script src="js/vendor/three.min.js" defer></script>
-<script src="js/hero.js" defer></script>
-<script src="js/main.js" defer></script>
-<noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
-</head>
-<body>
-<a class="skip" href="#main">Skip to content</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hazem Mtira | Junior Game Developer</title>
+    <meta
+      name="description"
+      content="Hazem Mtira, Software Engineering graduate and aspiring game developer in Sousse, Tunisia. Co-developer of RehabX, a platform of two therapeutic VR games."
+    />
+    <meta name="theme-color" content="#121214" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Hazem Mtira | Junior Game Developer" />
+    <meta
+      property="og:description"
+      content="Software Engineering graduate and aspiring game developer. Co-developer of RehabX, two therapeutic VR games."
+    />
+    <meta property="og:url" content="https://hazemmtira.netlify.app/" />
+    <link rel="icon" href="Assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/hero.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <noscript
+      ><style>
+        .reveal {
+          opacity: 1 !important;
+          transform: none !important;
+        }
+      </style></noscript
+    >
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
 
-<header class="nav">
-  <a class="logo" href="#top">HM / Portfolio</a>
-  <nav aria-label="Main">
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="Assets/Hazem_Mtira_CV_EN.pdf" download>CV</a></li>
-    </ul>
-  </nav>
-  <p class="status"><i aria-hidden="true"></i>Open to junior roles</p>
-</header>
-
-<main id="main">
-
-<!-- HERO -->
-<section id="top" class="hero">
-  <canvas id="scene" aria-hidden="true"></canvas>
-  <div class="hud hud-tl" aria-hidden="true"><b>Location</b>Sousse, Tunisia<b>Stack</b>Unity · C# · VR</div>
-  <div class="hud hud-tr" aria-hidden="true"><b>Internship</b>Inherited Games Studio<b>Grade</b>Excellent ★</div>
-  <div class="hud hud-bl" aria-hidden="true"><b>Focus</b>VR · Gameplay · Software Engineering</div>
-  <div class="hud hud-br" aria-hidden="true"><b>Seeking</b>Junior Game Developer</div>
-
-  <div class="hero-copy">
-    <h1>Hazem<br><span>Mtira</span></h1>
-    <p class="tagline">Building games that move people.</p>
-    <p class="lead">Software Engineering graduate and aspiring game developer. I recently completed a final-year internship at <strong>Inherited Games Studio</strong>, co-developing <strong>RehabX</strong>: two therapeutic VR games linked to a monitoring platform, graded <strong class="gold">“Excellent”</strong>.</p>
-    <div class="btns">
-      <span class="glow"><a class="btn" href="#projects">View my work</a></span>
-      <span class="glow"><a class="btn ghost" href="Assets/Hazem_Mtira_CV_EN.pdf" download>Download CV</a></span>
-    </div>
-    <ul class="socials">
-      <li><a href="https://github.com/hazemMtira" target="_blank" rel="noopener noreferrer">GitHub<span class="sr"> (opens in a new tab)</span></a></li>
-      <li><a href="https://www.linkedin.com/in/hazem-mtira" target="_blank" rel="noopener noreferrer">LinkedIn<span class="sr"> (opens in a new tab)</span></a></li>
-      <li><a href="mailto:hazemofficiel4@gmail.com">Email</a></li>
-    </ul>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about" class="sec">
-  <h2 class="reveal">From class projects to a <span>studio internship.</span></h2>
-  <div class="grid about">
-    <div class="card reveal">
-      <p>I’m a Software Engineering graduate (Licence in Computer Science, Software Engineering, ESSTHS, 2023–2026) with a growing focus on game development.</p>
-      <p>My final-year project took place during an internship at <strong>Inherited Games Studio</strong> (February–May 2026), where I co-developed <strong>RehabX</strong>: two therapeutic VR games linked to a monitoring platform, tested with real patients and graded <strong class="gold">“Excellent”</strong>.</p>
-      <p>Before that I built a 3D endless runner in Unity and worked in a team on Awqat, a web platform for events with an AI-assisted recommendation engine. I’m now looking for a junior game developer role, and I’m comfortable working in pairs and teams, including remotely.</p>
-      <dl class="meta">
-        <div><dt>Location</dt><dd>Sousse, Tunisia</dd></div>
-        <div><dt>Degree</dt><dd>Licence in Computer Science, Software Engineering · ESSTHS · 2023–2026</dd></div>
-        <div><dt>Languages</dt><dd>Arabic (native) · French (fluent) · English (B2) · Spanish (basic)</dd></div>
-        <div><dt>Status</dt><dd class="on">Open to junior roles</dd></div>
-      </dl>
-    </div>
-    <ul class="stats reveal">
-      <li><strong>2</strong><span>Therapeutic VR games</span></li>
-      <li><strong>3</strong><span>Projects</span></li>
-      <li><strong>Real</strong><span>Patient testing</span></li>
-      <li><strong class="gold">Excellent</strong><span>Final-year project grade</span></li>
-    </ul>
-  </div>
-</section>
-
-<!-- EXPERIENCE -->
-<section id="experience" class="sec">
-  <h2 class="reveal">Built in a <span>real studio.</span></h2>
-  <article class="card job reveal">
-    <header>
-      <div><h3>Game Development Intern (Final-Year Project)</h3><p class="org">Inherited Games Studio</p></div>
-      <p class="when">Feb 2026 – May 2026</p>
+    <header class="nav">
+      <a class="logo" href="#top">HM / Portfolio</a>
+      <nav aria-label="Main">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="Assets/Hazem_Mtira_CV_EN.pdf" download>CV</a></li>
+        </ul>
+      </nav>
+      <p class="status"><i aria-hidden="true"></i>Open to junior roles</p>
     </header>
-    <ul class="list">
-      <li>Co-developed <strong>RehabX</strong> with a teammate: two therapeutic VR games linked to a platform for therapists and their patients.</li>
-      <li>Managed the project as a two-person team: organised the work, tracked progress and delivered the platform.</li>
-      <li>Designed a therapist dashboard for remote session setup, live activity monitoring and automatic collection of performance data.</li>
-      <li>Centralised session data in a <strong>Supabase</strong> database to make progress easy to follow.</li>
-      <li>Tested with real patients, gathered their feedback and adjusted the project.</li>
-    </ul>
-    <p class="foot"><span class="badge gold">★ Graded “Excellent”</span> <a href="https://github.com/hazemMtira/RehabX" target="_blank" rel="noopener noreferrer">RehabX on GitHub<span class="sr"> (opens in a new tab)</span></a></p>
-  </article>
-  <div class="grid two">
-    <article class="card reveal"><h3>Robotics and Programming Workshop Leader</h3><p>Ran robotics workshops for children and introduced them to programming through playful activities. Supported their creative projects and worked regularly with parents and teaching teams.</p></article>
-    <article class="card reveal"><h3>Seasonal Customer Safety Agent (Pool)</h3><p>Looked after customer safety, calmly defused tense situations and helped English-speaking guests and non-English-speaking staff understand each other.</p></article>
-  </div>
-</section>
 
-<!-- SKILLS -->
-<section id="skills" class="sec">
-  <h2 class="reveal">What I <span>work with.</span></h2>
-  <div class="grid three">
-    <div class="card reveal"><h3>Game development</h3><ul class="chips"><li>Unity</li><li>3D gameplay</li><li>Movement &amp; collisions</li><li>Game loop</li><li>VR games</li></ul></div>
-    <div class="card reveal"><h3>Programming &amp; data</h3><ul class="chips"><li>C#</li><li>Python</li><li>PHP</li><li>SQL (MySQL)</li><li>Supabase</li></ul></div>
-    <div class="card reveal"><h3>Core coursework</h3><ul class="chips"><li>Algorithms &amp; data structures</li><li>Software engineering</li><li>Artificial intelligence</li><li>Databases</li><li>Embedded systems</li></ul></div>
-    <div class="card reveal"><h3>Tools</h3><ul class="chips"><li>GitHub</li><li>Microsoft Office</li></ul></div>
-    <div class="card reveal"><h3>Working style</h3><ul class="chips"><li>Pair &amp; team projects</li><li>Remote collaboration</li><li>User testing &amp; feedback</li><li>Time management</li><li>Quick learner</li></ul></div>
-    <div class="card reveal"><h3>Languages</h3><ul class="chips"><li>Arabic (native)</li><li>French (fluent)</li><li>English (B2, CEFR-certified)</li><li>Spanish (basic)</li></ul></div>
-  </div>
-</section>
+    <main id="main">
+      <!-- HERO -->
+      <section id="top" class="hero">
+        <canvas id="scene" aria-hidden="true"></canvas>
+        <div class="hud hud-tl" aria-hidden="true">
+          <b>Location</b>Sousse, Tunisia<b>Stack</b>Unity · C# · VR
+        </div>
+        <div class="hud hud-tr" aria-hidden="true">
+          <b>Internship</b>Inherited Games Studio<b>Grade</b>Excellent ★
+        </div>
+        <div class="hud hud-bl" aria-hidden="true">
+          <b>Focus</b>VR · 3D · Gameplay
+        </div>
+        <div class="hud hud-br" aria-hidden="true">
+          <b>Seeking</b>Junior Game Developer
+        </div>
 
-<!-- PROJECTS -->
-<section id="projects" class="sec">
-  <h2 class="reveal">What I’ve <span>built.</span></h2>
-  <div class="grid two projects">
-    <article class="card feature reveal">
-      <p class="kind gold">Final-year project · team of two · graded “Excellent”</p>
-      <h3>RehabX: therapeutic VR games and therapist platform</h3>
-      <p>Two therapeutic virtual-reality games linked to a monitoring platform built by our team: a therapist dashboard for remote session setup and live monitoring, with automatic data collection through Supabase. Tested with real patients.</p>
-      <ul class="chips"><li>VR</li><li>Supabase</li><li>Dashboard</li><li>User testing</li></ul>
-      <a class="more" href="https://github.com/hazemMtira/RehabX" target="_blank" rel="noopener noreferrer">View RehabX on GitHub<span class="sr"> (opens in a new tab)</span></a>
-    </article>
-    <article class="card reveal">
-      <p class="kind">University mini-project</p>
-      <h3>3D endless runner</h3>
-      <p>A 3D game in Unity with player movement, obstacles, collisions and a responsive game loop.</p>
-      <ul class="chips"><li>Unity</li><li>3D</li><li>Gameplay</li><li>Collisions</li></ul>
-    </article>
-    <article class="card reveal">
-      <p class="kind">Team project</p>
-      <h3>Awqat: event discovery platform</h3>
-      <p>A web platform for discovering and managing events, built by a team from design to implementation, with an AI-assisted recommendation engine.</p>
-      <ul class="chips"><li>PHP</li><li>MySQL</li><li>Python</li><li>AI recommendations</li></ul>
-      <!-- To link the repository, add: <a class="more" href="YOUR-AWQAT-REPO-URL" target="_blank" rel="noopener noreferrer">View on GitHub</a> -->
-    </article>
-  </div>
-</section>
+        <div class="hero-copy">
+          <h1>Hazem<br /><span>Mtira</span></h1>
+          <p class="tagline">Building games that move people.</p>
+          <p class="lead">
+            Software Engineering graduate and aspiring game developer. I
+            recently completed a final-year internship at
+            <strong>Inherited Games Studio</strong>, co-developing
+            <strong>RehabX</strong>: two therapeutic VR games linked to a
+            monitoring platform, graded
+            <strong class="gold">“Excellent”</strong>.
+          </p>
+          <div class="btns">
+            <span class="glow"
+              ><a class="btn" href="#projects">View my work</a></span
+            >
+            <span class="glow"
+              ><a class="btn ghost" href="Assets/Hazem_Mtira_CV_EN.pdf" download
+                >Download CV</a
+              ></span
+            >
+          </div>
+          <ul class="socials">
+            <li>
+              <a
+                href="https://github.com/hazemMtira"
+                target="_blank"
+                rel="noopener noreferrer"
+                >GitHub<span class="sr"> (opens in a new tab)</span></a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/hazem-mtira-2075b73b2/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >LinkedIn<span class="sr"> (opens in a new tab)</span></a
+              >
+            </li>
+            <li>
+              <a id="email-copy-btn" href="mailto:hazemofficiel4@gmail.com"
+                >Email</a
+              >
+              <span
+                id="copy-message"
+                style="
+                  display: none;
+                  color: green;
+                  margin-left: 10px;
+                  font-size: 14px;
+                "
+              ></span>
+            </li>
+          </ul>
+        </div>
+      </section>
 
-<!-- CONTACT -->
-<section id="contact" class="sec">
-  <h2 class="reveal">Let’s build <span>something.</span></h2>
-  <div class="grid two">
-    <div class="card reveal">
-      <p>I’m looking for a junior game developer role. I’m based in Tunisia and happy to work remotely. If you’re hiring, or just want to talk games, get in touch.</p>
-      <ul class="links">
-        <li><a href="mailto:hazemofficiel4@gmail.com">hazemofficiel4@gmail.com</a></li>
-        <li><a href="https://www.linkedin.com/in/hazem-mtira" target="_blank" rel="noopener noreferrer">linkedin.com/in/hazem-mtira<span class="sr"> (opens in a new tab)</span></a></li>
-        <li><a href="https://github.com/hazemMtira" target="_blank" rel="noopener noreferrer">github.com/hazemMtira<span class="sr"> (opens in a new tab)</span></a></li>
-      </ul>
-    </div>
-    <div class="card reveal">
-      <h3>Download my CV</h3>
-      <ul class="links">
-        <li><a href="Assets/Hazem_Mtira_CV_EN.pdf" download>English, junior game developer<em>PDF</em></a></li>
-        <li><a href="Assets/Hazem_Mtira_CV_FR.pdf" download>Français, développeur de jeux vidéo junior<em>PDF</em></a></li>
-        <li><a href="Assets/Hazem_Mtira_CV_FR_General.pdf" download>Français, version générale<em>PDF</em></a></li>
-      </ul>
-    </div>
-  </div>
-</section>
+      <!-- ABOUT -->
+      <section id="about" class="sec">
+        <h2 class="reveal">
+          From class projects to a <span>studio internship.</span>
+        </h2>
+        <div class="grid about">
+          <div class="card reveal">
+            <p>
+              I’m a Software Engineering graduate (Licence in Computer Science,
+              Software Engineering, ESSTHS, 2023–2026) with a growing focus on
+              game development.
+            </p>
+            <p>
+              My final-year project took place during an internship at
+              <strong>Inherited Games Studio</strong> (February–May 2026), where
+              I co-developed <strong>RehabX</strong>: two therapeutic VR games
+              linked to a monitoring platform, tested with real patients and
+              graded <strong class="gold">“Excellent”</strong>.
+            </p>
+            <p>
+              Before that I built a 3D endless runner in Unity and worked in a
+              team on Awqat, a web platform for events with an AI-assisted
+              recommendation engine. I also built Chkoba, an online version of
+              the traditional Tunisian card game, to play with friends who are
+              far away. I’m now looking for a junior game developer role, and
+              I’m comfortable working in pairs and teams, including remotely.
+            </p>
+            <dl class="meta">
+              <div>
+                <dt>Location</dt>
+                <dd>Sousse, Tunisia</dd>
+              </div>
+              <div>
+                <dt>Degree</dt>
+                <dd>
+                  Licence in Computer Science, Software Engineering · ESSTHS ·
+                  2023–2026
+                </dd>
+              </div>
+              <div>
+                <dt>Languages</dt>
+                <dd>
+                  Arabic (native) · French (fluent) · English (B2) · Spanish
+                  (basic)
+                </dd>
+              </div>
+              <div>
+                <dt>Status</dt>
+                <dd class="on">Open to junior roles</dd>
+              </div>
+            </dl>
+          </div>
+          <ul class="stats reveal">
+            <li><strong>2</strong><span>Therapeutic VR games</span></li>
+            <li><strong>4</strong><span>Projects</span></li>
+            <li><strong>Real</strong><span>Patient testing</span></li>
+            <li>
+              <strong class="gold">Excellent</strong
+              ><span>Final-year project grade</span>
+            </li>
+          </ul>
+        </div>
+      </section>
 
-</main>
+      <!-- EXPERIENCE -->
+      <section id="experience" class="sec">
+        <h2 class="reveal">Hands-on <span>Experience</span></h2>
+        <article class="card job reveal">
+          <header>
+            <div>
+              <h3>Game Development Intern (Final-Year Project)</h3>
+              <p class="org">Inherited Games Studio</p>
+            </div>
+            <p class="when">Feb 2026 – May 2026</p>
+          </header>
+          <ul class="list">
+            <li>
+              Co-developed <strong>RehabX</strong> with a teammate: two
+              therapeutic VR games linked to a platform for therapists and their
+              patients.
+            </li>
+            <li>
+              Managed the project as a two-person team: organised the work,
+              tracked progress and delivered the platform.
+            </li>
+            <li>
+              Designed a therapist dashboard for remote session setup, live
+              activity monitoring and automatic collection of performance data.
+            </li>
+            <li>
+              Centralised session data in a <strong>Supabase</strong> database
+              to make progress easy to follow.
+            </li>
+            <li>
+              Tested with real patients, gathered their feedback and adjusted
+              the project.
+            </li>
+          </ul>
+        </article>
+        <div class="grid two">
+          <article class="card reveal">
+            <h3>Robotics and Programming Workshop Teacher</h3>
+            <p>
+              Ran robotics workshops for children and introduced them to
+              programming through playful activities. Supported their creative
+              projects and worked regularly with parents and teaching teams.
+            </p>
+          </article>
+        </div>
+      </section>
 
-<footer class="foot-bar">
-  <p>© <span id="year">2026</span> Hazem Mtira · Sousse, Tunisia</p>
-  <a href="#top">Back to top</a>
-</footer>
-</body>
+      <!-- SKILLS -->
+      <section id="skills" class="sec">
+        <h2 class="reveal">What I <span>work with.</span></h2>
+        <div class="grid three">
+          <div class="card reveal">
+            <h3>Game development</h3>
+            <ul class="chips">
+              <li>Unity</li>
+              <li>3D gameplay</li>
+              <li>Movement &amp; collisions</li>
+              <li>Game loop</li>
+              <li>VR games</li>
+            </ul>
+          </div>
+          <div class="card reveal">
+            <h3>Programming &amp; data</h3>
+            <ul class="chips">
+              <li>C#</li>
+              <li>Python</li>
+              <li>PHP</li>
+              <li>SQL (MySQL)</li>
+              <li>Supabase</li>
+            </ul>
+          </div>
+          <div class="card reveal">
+            <h3>Core coursework</h3>
+            <ul class="chips">
+              <li>Algorithms &amp; data structures</li>
+              <li>Software engineering</li>
+              <li>Artificial intelligence</li>
+              <li>Databases</li>
+              <li>Embedded systems</li>
+            </ul>
+          </div>
+          <div class="card reveal">
+            <h3>Tools</h3>
+            <ul class="chips">
+              <li>GitHub</li>
+              <li>Microsoft Office</li>
+            </ul>
+          </div>
+          <div class="card reveal">
+            <h3>Working style</h3>
+            <ul class="chips">
+              <li>Pair &amp; team projects</li>
+              <li>Remote collaboration</li>
+              <li>User testing &amp; feedback</li>
+              <li>Time management</li>
+              <li>Quick learner</li>
+            </ul>
+          </div>
+          <div class="card reveal">
+            <h3>Languages</h3>
+            <ul class="chips">
+              <li>Arabic (native)</li>
+              <li>French (fluent)</li>
+              <li>English (B2, CEFR-certified)</li>
+              <li>Spanish (basic)</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects" class="sec">
+        <h2 class="reveal">What I’ve <span>built.</span></h2>
+        <div class="grid projects">
+          <article class="card feature reveal">
+            <p class="kind gold">
+              Final-year project · team of two · graded “Excellent”
+            </p>
+            <h3>RehabX: therapeutic VR games and therapist platform</h3>
+            <p>
+              Two therapeutic virtual-reality games linked to a monitoring
+              platform built by our team: a therapist dashboard for remote
+              session setup and live monitoring, with automatic data collection
+              through Supabase. Tested with real patients.
+            </p>
+            <ul class="chips">
+              <li>VR</li>
+              <li>Supabase</li>
+              <li>Dashboard</li>
+              <li>User testing</li>
+            </ul>
+          </article>
+          <article class="card reveal">
+            <p class="kind">Personal project</p>
+            <h3>Chkoba: the Tunisian card game, online</h3>
+            <p>
+              A virtual version of Chkoba, the traditional Tunisian card game,
+              built so friends who are far apart can play together. A small
+              platform with a Supabase backend.
+            </p>
+            <ul class="chips">
+              <li>Supabase</li>
+              <li>Multiplayer</li>
+              <li>Web game</li>
+            </ul>
+            <a
+              class="more"
+              href="https://chkobatn.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Play Chkoba<span class="sr"> (opens in a new tab)</span></a
+            >
+          </article>
+          <article class="card reveal">
+            <p class="kind">University mini-project</p>
+            <h3>3D endless runner</h3>
+            <p>
+              A 3D game in Unity with player movement, obstacles, collisions and
+              a responsive game loop.
+            </p>
+            <ul class="chips">
+              <li>Unity</li>
+              <li>3D</li>
+              <li>Gameplay</li>
+              <li>Collisions</li>
+            </ul>
+          </article>
+          <article class="card reveal">
+            <p class="kind">Team project</p>
+            <h3>Awqat: event discovery platform</h3>
+            <p>
+              A web platform for discovering and managing events, built by a
+              team from design to implementation, with an AI-assisted
+              recommendation engine.
+            </p>
+            <ul class="chips">
+              <li>PHP</li>
+              <li>MySQL</li>
+              <li>Python</li>
+              <li>AI recommendations</li>
+            </ul>
+            <!-- To link the repository, add: <a class="more" href="YOUR-AWQAT-REPO-URL" target="_blank" rel="noopener noreferrer">View on GitHub</a> -->
+          </article>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="sec">
+        <h2 class="reveal">Let’s build <span>something.</span></h2>
+        <div class="grid two">
+          <div class="card reveal">
+            <p>
+              I’m looking for a junior game developer role. I’m based in Tunisia
+              and happy to work remotely. If you’re hiring, or just want to talk
+              games, get in touch.
+            </p>
+            <ul class="links">
+              <li>
+                <a href="mailto:hazemofficiel4@gmail.com"
+                  >hazemofficiel4@gmail.com</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/hazem-mtira"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >linkedin.com/in/hazem-mtira<span class="sr">
+                    (opens in a new tab)</span
+                  ></a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://github.com/hazemMtira"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >github.com/hazemMtira<span class="sr">
+                    (opens in a new tab)</span
+                  ></a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="card reveal">
+            <h3>Download my CV</h3>
+            <ul class="links">
+              <li>
+                <a href="Assets/Hazem_Mtira_CV_EN.pdf" download
+                  >English, junior game developer<em>PDF</em></a
+                >
+              </li>
+              <li>
+                <a href="Assets/Hazem_Mtira_CV_FR.pdf" download
+                  >Français, développeur de jeux vidéo junior<em>PDF</em></a
+                >
+              </li>
+              <li>
+                <a href="Assets/Hazem_Mtira_CV_FR_General.pdf" download
+                  >Français, version générale<em>PDF</em></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="foot-bar">
+      <p>© <span id="year">2026</span> Hazem Mtira · Sousse, Tunisia</p>
+      <a href="#top">Back to top</a>
+    </footer>
+  </body>
 </html>
